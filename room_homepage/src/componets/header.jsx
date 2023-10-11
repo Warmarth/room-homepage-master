@@ -11,32 +11,29 @@ const Header = (props) => {
   };
 
   return (
-    <div className="flex gap-5 items-center p-6 transition-all">
+    <div className="fixed top-0 flex z-10 gap-20 items-center  py-6  transition-all">
       <img
         src={isMenuOpen ? closeIcon : menu}
         alt={isMenuOpen ? closeIcon : menu}
         onClick={togglrMenu}
-        className="cursor-pointer mr-20 lg:hidden"
+        className="cursor-pointer mr-[3rem] ml-[2rem] lg:hidden"
       />
 
-      <img src={logo} alt="logo" className=" justify-self-center " />
+      <img src={logo} alt="logo" className="ml-[2rem]" />
       <div
         className={`${
-          isMenuOpen ? "absolute flex bg-white py-6" : "hidden"
-        } lg:flex justify-between gap-4 items-center`}
+          isMenuOpen ? "absolute flex bg-white p-4 " : "hidden"
+        } lg:flex justify-between font-bold font-mono gap-10 items-center transition-shadow`}
       >
         <img
           src={isMenuOpen ? closeIcon : menu}
           alt={isMenuOpen ? closeIcon : menu}
           onClick={togglrMenu}
-          className="lg:hidden cursor-pointer"
+          className="lg:hidden cursor-pointer "
         />
-        <ul className="sm:absolute lg:relative flex gap-4">
+        <ul className=" lg:relative flex space-x-5 p-4 lg:text-white">
           {navbar.map((item, index) => (
-            <li
-              key={index}
-              className="lg:text-slate-100 cursor-pointer hover:border-b-2"
-            >
+            <li key={index} className=" cursor-pointer hover:shadow-lg">
               {item}
             </li>
           ))}
