@@ -63,7 +63,7 @@ const Hero = () => {
   }, []);
   const currentData = data[currentIndex];
   return (
-    <div className="lg:flex justify-between items-center">
+    <div className="lg:flex justify-between gap-[3rem] items-center">
       <div className="relative w-full">
         <img
           src={
@@ -84,10 +84,10 @@ const Hero = () => {
           </span>
         </div>
       </div>
-      <div className=" m-[2rem] lg:p-[2rem] flex flex-col gap-[2rem] items-start justify-center max-w-[30rem] ">
-        <h1 className="font-bold text-2xl">{currentData.title}</h1>
-        <p>{currentData.note}</p>
-        <span className="flex items-center gap-2 tracking-[2em] uppercase text-[.789rem] font-extrabold">
+      <div className=" mx-auto  p-[1rem] flex flex-col gap-[2rem] items-start justify-center max-w-[37rem] ">
+        <h1 className="font-bold text-[3rem]">{currentData.title}</h1>
+        <p className="text-gray-400">{currentData.note}</p>
+        <span className="flex items-center gap-2 tracking-[2em] uppercase text-[1rem] font-extrabold">
           {currentData.link}
           <img src={arrow} alt="arrow" className="animate-pulse" />
         </span>
